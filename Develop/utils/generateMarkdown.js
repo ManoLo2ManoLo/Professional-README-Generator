@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
   } else if (license === 'BSD 3') {
     return `https://img.shields.io/badge/license-BSD%203-blue`
   } else {
-    return;
+    return `https://img.shields.io/badge/license-NONE-blue`;
   }
 }
 
@@ -18,36 +18,27 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'MIT') {
-
+    return `https://opensource.org/licenses/MIT`
   } else if (license === 'APACHE 2.0') {
-    
+    return `https://opensource.org/licenses/Apache-2.0`
   } else if (license === 'GPL 3.0') {
-    
+    return `https://opensource.org/licenses/GPL-3.0`
   } else if (license === 'BSD 3') {
-    
+    return `https://opensource.org/licenses/BSD-3-Clause`
   } else {
-    
+    return ' ';
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === 'MIT') {
-    return `
-    MIT License
-    https://opensource.org/licenses/MIT`
-  } else if (license === 'APACHE 2.0') {
-    return `
-    Apache License 
-    http://www.apache.org/licenses/`
-    
-  } else if (license === 'GPL 3.0') {
-    
-  } else if (license === 'BSD 3') {
-    
+  if (license != 'None') {
+    return `## License
+  ${license} License <br />
+  Link to the website: ${renderLicenseLink(license)}`
   } else {
-    
+    return ' ';
   }
 }
 
@@ -55,8 +46,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   //renderLicenseLink(data.license);
   //renderLicenseSection(data.license);
-  return `
-  # ${data.title}
+  return `# ${data.title}
 
   ## Description:
   ${data.description}
@@ -78,11 +68,10 @@ function generateMarkdown(data) {
   ${data.information}
 
   ## Credits
-  ${data.username} <br />
-  ${data.email}
+  The following code was written and revised by ${data.username}. <br />
+  Any questions, you can email them ${data.email} .
 
-  ## License
-  ${data.license}
+  ${renderLicenseSection(data.license)}
 
   ## Badges
   ![${data.title}](${renderLicenseBadge(data.license)})
