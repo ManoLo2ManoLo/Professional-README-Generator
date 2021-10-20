@@ -2,15 +2,15 @@
 // If there is no license, return an empty string 'MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
-
+    return `https://img.shields.io/badge/license-MIT-blue`
   } else if (license === 'APACHE 2.0') {
-    
+    return `https://img.shields.io/badge/license-APACHE%202.0-blue`
   } else if (license === 'GPL 3.0') {
-    
+    return `https://img.shields.io/badge/license-GPL%203.0-blue`
   } else if (license === 'BSD 3') {
-    
+    return `https://img.shields.io/badge/license-BSD%203-blue`
   } else {
-
+    return;
   }
 }
 
@@ -34,8 +34,13 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === 'MIT') {
-
+    return `
+    MIT License
+    https://opensource.org/licenses/MIT`
   } else if (license === 'APACHE 2.0') {
+    return `
+    Apache License 
+    http://www.apache.org/licenses/`
     
   } else if (license === 'GPL 3.0') {
     
@@ -48,9 +53,8 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  renderLicenseBadge(data.license);
-  renderLicenseLink(data.license);
-  renderLicenseSection(data.license);
+  //renderLicenseLink(data.license);
+  //renderLicenseSection(data.license);
   return `
   # ${data.title}
 
@@ -81,6 +85,7 @@ function generateMarkdown(data) {
   ${data.license}
 
   ## Badges
+  ![${data.title}](${renderLicenseBadge(data.license)})
 
   ## Features
 
