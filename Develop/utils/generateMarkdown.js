@@ -58,14 +58,14 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  -[installation](#Installation)
-  -[usage](#Usage)
-  -[credits](#Credits)
-  -[license](#License)
-  -[badges](#Badges)
-  -[features](#Features)
-  -[contributing](#Contributing)
-  -[tests](#Tests)
+  * [installation](#Installation)
+  * [usage](#Usage)
+  * [credits](#Credits)
+  * [license](#License)
+  * [badges](#Badges)
+  * [features](#Features)
+  * [contributing](#Contributing)
+  * [tests](#Tests)
 
   ## Installation
   ${data.installation}
@@ -74,7 +74,7 @@ function generateMarkdown(data) {
   ${data.information}
 
   ## Credits
-  ${data.username}
+  ${data.username} <br />
   ${data.email}
 
   ## License
