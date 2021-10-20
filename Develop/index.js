@@ -1,30 +1,61 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-
-let filename = '';
+const markdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'username',
-        message: "What is your GitHub username?"
+        message: "What is your GitHub username?",
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('You need a Github username!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'email',
-        message: "What is your email address?"
+        message: "What is your email address?",
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('You need an email!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
-        name: 'name',
-        message: "What is your project's name?"
+        name: 'title',
+        message: "What is your project's name?",
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('You need a title!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message: "Please write a short description of your project"
+        message: "Please write a short description of your project",
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('You need a description!');
+                return false;
+            }
+        }
     },
     {
         type: 'list',
@@ -47,12 +78,20 @@ const questions = [
     {
         type: 'input',
         name: 'information',
-        message: "What does the user need to know about using the repo?"
+        message: "What does the user need to know about using the repo?",
+        validate: informationInput => {
+            if (informationInput) {
+                return true;
+            } else {
+                console.log('You need some information!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'contribution',
-        message: "What does the user need to know about contributing to the repo?"
+        message: "What does the user need to know about contributing to the repo?",
     },
 ];
 
@@ -63,14 +102,14 @@ function writeToFile(fileName, data) {
           return console.log(err);
         }
   
-        console.log('Success!');
+        console.log('Generating Read Me...');
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(function(data) {
-        const fileName = "README.json";
+        const fileName = "README.md";
         writeToFile(fileName, data);
     });
 }
