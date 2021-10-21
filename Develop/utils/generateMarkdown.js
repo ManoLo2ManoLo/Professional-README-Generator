@@ -52,14 +52,15 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * [installation](#Installation)
-  * [usage](#Usage)
-  * [credits](#Credits)
-  * [license](#License)
-  * [badges](#Badges)
-  * [features](#Features)
-  * [contributing](#Contributing)
-  * [tests](#Tests)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Credits](#Credits)
+  * [License](#License)
+  * [Badges](#Badges)
+  * [Features](#Features)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [Questions]
 
   ## Installation
   ${data.installation}
@@ -69,7 +70,7 @@ function generateMarkdown(data) {
 
   ## Credits
   The following code was written and revised by ${data.username}. <br />
-  Any questions, you can email them ${data.email} .
+  Any questions, you can email them ${data.email}.
 
   ${renderLicenseSection(data.license)}
 
@@ -77,6 +78,7 @@ function generateMarkdown(data) {
   ![${data.title}](${renderLicenseBadge(data.license)})
 
   ## Features
+  ${data.features}
 
   ## Contributing
   ${data.contribution}
@@ -84,6 +86,9 @@ function generateMarkdown(data) {
   ## Tests
   ${data.test}
 
+  ## Questions
+  You can reach me on my [Github profile](https://github.com/${data.username}).
+  Any questions, you can email me at [${data.email}](${data.email}).
 `;
 }
 

@@ -90,6 +90,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'features',
+        message: "What are some features that sets apart your project from the rest?",
+    },
+    {
+        type: 'input',
         name: 'contribution',
         message: "What does the user need to know about contributing to the repo?",
     },

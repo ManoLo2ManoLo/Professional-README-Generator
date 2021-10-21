@@ -1,40 +1,45 @@
 # Professional-README-Generator
 
   ## Description:
-  The following project is to be able to create a read me file for github through node.js.
+  The project is an essential tool that will allow the user to create a read me with ease. As the user only has to anser a few questions to have a read me generated
 
   ## Table of Contents
-  * [installation](#Installation)
-  * [usage](#Usage)
-  * [credits](#Credits)
-  * [license](#License)
-  * [badges](#Badges)
-  * [features](#Features)
-  * [contributing](#Contributing)
-  * [tests](#Tests)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Credits](#Credits)
+  * [License](#License)
+  * [Badges](#Badges)
+  * [Features](#Features)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [Questions]
 
   ## Installation
   npm i
 
   ## Usage
-  A user needs to learn how to understand node.
+  Have knowledge in node.
 
   ## Credits
   The following code was written and revised by ManoLo2ManoLo. <br />
-  Any questions, you can email them manuel_canas@aol.com .
+  Any questions, you can email them manuel_canas@aol.com.
 
   ## License
-  APACHE 2.0 License <br />
-  Link to the website: https://opensource.org/licenses/Apache-2.0
+  MIT License <br />
+  Link to the website: https://opensource.org/licenses/MIT
 
   ## Badges
-  ![Professional-README-Generator](https://img.shields.io/badge/license-APACHE%202.0-blue)
+  ![Professional-README-Generator](https://img.shields.io/badge/license-MIT-blue)
 
   ## Features
+  Not much sets it apart
 
   ## Contributing
-  To contribute to this, you would need to email me.
+  nothing
 
   ## Tests
   npm test
 
+  ## Questions
+  You can reach me on my [Github profile](https://github.com/ManoLo2ManoLo).
+  Any questions, you can email me at [manuel_canas@aol.com](manuel_canas@aol.com).
