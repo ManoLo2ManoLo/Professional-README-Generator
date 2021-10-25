@@ -6,7 +6,7 @@ Link to Video Walkthrough: https://watch.screencastify.com/v/SKrWjqOnKJ1u07w1WQB
 
 ## Table of Contents (Optional)
 * [Description](#description)
-* [Screenshot] (#screenshot)
+* [Screenshot](#screenshot)
 * [Credits](#credits)
 * [License](#license)
 
