@@ -2,15 +2,20 @@
 
 ## Link Section
 Link to Github Repository: https://github.com/ManoLo2ManoLo/Professional-README-Generator.git <br />
-Link to Video Walkthrough:
+Link to Video Walkthrough: https://watch.screencastify.com/v/SKrWjqOnKJ1u07w1WQBP
 
 ## Table of Contents (Optional)
 * [Description](#description)
+* [Screenshot] (#screenshot)
 * [Credits](#credits)
 * [License](#license)
 
 ## Description
 The purpose of the application is to generate a readme with just answering a few question through git bashes' terminal. In git bash, navigate to the develop folder that contains index.js. Type 'node index.js' to begin the answering question that ask for github username, email, description, licensing, and various other topic that are required in a professional looking readme. After you answered all 10 questions, you will see in the console that a readme is being generated. If you look inside the develop alongside the index.js file is a README.md file, containing the information you answered in gitbash.
+
+## Screenshot
+In this image, you can see that typed 'node index.js' to start application inside the develop folder. Answered a few questions then a readme is generating
+![Screenshot (239)](https://user-images.githubusercontent.com/88364269/138629027-a261c607-c36a-4914-8fbc-40f425e57655.png)
 
 ## Credits
 This code had a starter code provided by Rutgers University Bootcamp.
